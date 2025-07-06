@@ -66,4 +66,4 @@ gem 'devise-i18n-views'
 
 gem "devise", "~> 4.9"
 
-gem "concurrent-ruby", "1.3.4"
+gem "concurrent-ruby", "1.3.5"
