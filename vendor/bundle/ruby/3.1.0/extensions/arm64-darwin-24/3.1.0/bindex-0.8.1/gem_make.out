@@ -1,0 +1,17 @@
+current directory: /Users/satomi/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/satomi/.rbenv/versions/3.1.4/bin/ruby -I /Users/satomi/.rbenv/versions/3.1.4/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/satomi/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250702-97081-cjlylx sitelibdir\=./.gem.20250702-97081-cjlylx clean
+
+current directory: /Users/satomi/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250702-97081-cjlylx sitelibdir\=./.gem.20250702-97081-cjlylx
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+ld: warning: ignoring file '/Users/satomi/.rbenv/versions/3.1.4/lib/libruby.3.1.dylib': found architecture 'arm64', required architecture 'x86_64'
+
+current directory: /Users/satomi/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20250702-97081-cjlylx sitelibdir\=./.gem.20250702-97081-cjlylx install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20250702-97081-cjlylx/skiptrace/internal

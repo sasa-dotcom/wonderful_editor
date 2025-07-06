@@ -1,0 +1,17 @@
+current directory: /Users/satomi/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
+/Users/satomi/.rbenv/versions/3.1.4/bin/ruby -I /Users/satomi/.rbenv/versions/3.1.4/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/satomi/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250702-97081-k6hzte sitelibdir\=./.gem.20250702-97081-k6hzte clean
+
+current directory: /Users/satomi/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250702-97081-k6hzte sitelibdir\=./.gem.20250702-97081-k6hzte
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+ld: warning: ignoring file '/Users/satomi/.rbenv/versions/3.1.4/lib/libruby.3.1.dylib': found architecture 'arm64', required architecture 'x86_64'
+
+current directory: /Users/satomi/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250702-97081-k6hzte sitelibdir\=./.gem.20250702-97081-k6hzte install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20250702-97081-k6hzte/racc
