@@ -304,7 +304,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   kaminari
   listen (~> 3.3)
-  pg (~> 1.2)
+  pg (~> 1.1)
   pry-byebug
   pry-doc
   pry-rails
@@ -325,4 +325,4 @@ RUBY VERSION
    ruby 3.1.3p185
 
 BUNDLED WITH
-   2.6.9
+   2.3.26
