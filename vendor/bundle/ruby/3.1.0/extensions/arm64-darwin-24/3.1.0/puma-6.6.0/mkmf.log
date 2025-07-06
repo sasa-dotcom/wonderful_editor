@@ -1,0 +1,164 @@
+have_library: checking for BIO_read() in -llibcrypto... -------------------- no
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/satomi/.rbenv/versions/3.1.4/lib "clang -o conftest -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0/arm64-darwin24 -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0/ruby/backward -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0 -I. -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/satomi/.rbenv/versions/3.1.4/lib -L/opt/homebrew/opt/openssl@3/lib -L. -fstack-protector-strong     -lruby.3.1   "
+ld: warning: ignoring file '/Users/satomi/.rbenv/versions/3.1.4/lib/libruby.3.1.dylib': found architecture 'arm64', required architecture 'x86_64'
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/satomi/.rbenv/versions/3.1.4/lib "clang -o conftest -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0/arm64-darwin24 -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0/ruby/backward -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0 -I. -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/satomi/.rbenv/versions/3.1.4/lib -L/opt/homebrew/opt/openssl@3/lib -L. -fstack-protector-strong     -lruby.3.1 -llibcrypto   "
+conftest.c:14:57: error: use of undeclared identifier 'BIO_read'
+   14 | int t(void) { void ((*volatile p)()); p = (void ((*)()))BIO_read; return !p; }
+      |                                                         ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))BIO_read; return !p; }
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/satomi/.rbenv/versions/3.1.4/lib "clang -o conftest -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0/arm64-darwin24 -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0/ruby/backward -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0 -I. -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/satomi/.rbenv/versions/3.1.4/lib -L/opt/homebrew/opt/openssl@3/lib -L. -fstack-protector-strong     -lruby.3.1 -llibcrypto   "
+ld: library 'libcrypto' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: extern void BIO_read();
+15: int t(void) { BIO_read(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for BIO_read() in -lcrypto... -------------------- no
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/satomi/.rbenv/versions/3.1.4/lib "clang -o conftest -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0/arm64-darwin24 -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0/ruby/backward -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0 -I. -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/satomi/.rbenv/versions/3.1.4/lib -L/opt/homebrew/opt/openssl@3/lib -L. -fstack-protector-strong     -lruby.3.1 -lcrypto   "
+conftest.c:14:57: error: use of undeclared identifier 'BIO_read'
+   14 | int t(void) { void ((*volatile p)()); p = (void ((*)()))BIO_read; return !p; }
+      |                                                         ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))BIO_read; return !p; }
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/satomi/.rbenv/versions/3.1.4/lib "clang -o conftest -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0/arm64-darwin24 -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0/ruby/backward -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0 -I. -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/satomi/.rbenv/versions/3.1.4/lib -L/opt/homebrew/opt/openssl@3/lib -L. -fstack-protector-strong     -lruby.3.1 -lcrypto   "
+ld: warning: ignoring file '/opt/homebrew/opt/openssl@3/lib/libcrypto.dylib': found architecture 'arm64', required architecture 'x86_64'
+ld: warning: ignoring file '/Users/satomi/.rbenv/versions/3.1.4/lib/libruby.3.1.dylib': found architecture 'arm64', required architecture 'x86_64'
+Undefined symbols for architecture x86_64:
+  "_BIO_read", referenced from:
+      _t in conftest-867d07.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: extern void BIO_read();
+15: int t(void) { BIO_read(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for BIO_read() in -llibeay32... -------------------- no
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/satomi/.rbenv/versions/3.1.4/lib "clang -o conftest -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0/arm64-darwin24 -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0/ruby/backward -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0 -I. -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/satomi/.rbenv/versions/3.1.4/lib -L/opt/homebrew/opt/openssl@3/lib -L. -fstack-protector-strong     -lruby.3.1 -llibeay32   "
+conftest.c:14:57: error: use of undeclared identifier 'BIO_read'
+   14 | int t(void) { void ((*volatile p)()); p = (void ((*)()))BIO_read; return !p; }
+      |                                                         ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))BIO_read; return !p; }
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/satomi/.rbenv/versions/3.1.4/lib "clang -o conftest -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0/arm64-darwin24 -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0/ruby/backward -I/Users/satomi/.rbenv/versions/3.1.4/include/ruby-3.1.0 -I. -I/opt/homebrew/opt/openssl@3/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/satomi/.rbenv/versions/3.1.4/lib -L/opt/homebrew/opt/openssl@3/lib -L. -fstack-protector-strong     -lruby.3.1 -llibeay32   "
+ld: library 'libeay32' not found
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: extern void BIO_read();
+15: int t(void) { BIO_read(); return 0; }
+/* end */
+
+--------------------
+

@@ -1,0 +1,27 @@
+current directory: /Users/satomi/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/io-console-0.8.0/ext/io/console
+/Users/satomi/.rbenv/versions/3.1.4/bin/ruby -I /Users/satomi/.rbenv/versions/3.1.4/lib/ruby/3.1.0 extconf.rb
+checking for rb_syserr_fail_str(0, Qnil)... no
+checking for rb_syserr_new_str(0, Qnil)... no
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/Users/satomi/.rbenv/versions/3.1.4/bin/$(RUBY_BASE_NAME)
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/satomi/wonderful_editor/vendor/bundle/ruby/3.1.0/extensions/arm64-darwin-24/3.1.0/io-console-0.8.0/mkmf.log
+
+extconf failed, exit code 1

@@ -1,0 +1,22 @@
+current directory: /Users/satomi/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/json-2.12.2/ext/json/ext/parser
+/Users/satomi/.rbenv/versions/3.1.4/bin/ruby -I /Users/satomi/.rbenv/versions/3.1.4/lib/ruby/3.1.0 extconf.rb
+checking for rb_enc_interned_str() in ruby.h... no
+checking for rb_hash_new_capa() in ruby.h... no
+checking for rb_hash_bulk_insert() in ruby.h... no
+checking for strnlen() in string.h... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /Users/satomi/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/json-2.12.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250702-97081-xibj9r sitelibdir\=./.gem.20250702-97081-xibj9r clean
+
+current directory: /Users/satomi/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/json-2.12.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250702-97081-xibj9r sitelibdir\=./.gem.20250702-97081-xibj9r
+compiling parser.c
+linking shared-object json/ext/parser.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+ld: warning: ignoring file '/Users/satomi/.rbenv/versions/3.1.4/lib/libruby.3.1.dylib': found architecture 'arm64', required architecture 'x86_64'
+
+current directory: /Users/satomi/wonderful_editor/vendor/bundle/ruby/3.1.0/gems/json-2.12.2/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20250702-97081-xibj9r sitelibdir\=./.gem.20250702-97081-xibj9r install
+/usr/bin/install -c -m 0755 parser.bundle ./.gem.20250702-97081-xibj9r/json/ext
