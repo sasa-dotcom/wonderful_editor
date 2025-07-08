@@ -53,9 +53,9 @@ group :development do
   gem "rubocop-rails", require: false
   gem "rubocop-rspec", require: false
 
-  gem 'rspec-rails'
-  gem 'faker'
-  gem 'factory_bot_rails'
+  gem "factory_bot_rails"
+  gem "faker"
+  gem "rspec-rails"
 end
 
 group :test do
