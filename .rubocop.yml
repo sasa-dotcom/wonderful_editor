@@ -1,5 +1,6 @@
-plugins:
+require:
   - rubocop-rails
+  - rubocop-rspec
 
 inherit_from:
   - config/rubocop/rubocop.yml
