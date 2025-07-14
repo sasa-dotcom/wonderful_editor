@@ -1,6 +1,5 @@
 require:
   - rubocop-rails
-  - rubocop-rspec
 
 inherit_from:
   - config/rubocop/rubocop.yml
@@ -9,3 +8,6 @@ inherit_from:
 
 AllCops:
   TargetRubyVersion: 3.1
+
+RSpec/MultipleExpectations:
+  Enabled: false  # 完全に無効化したい場合
