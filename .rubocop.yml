@@ -1,6 +1,5 @@
-plugins:
+require:
   - rubocop-rails
-  - rubocop-rspec
 
 inherit_from:
   - config/rubocop/rubocop.yml
@@ -9,7 +8,6 @@ inherit_from:
 
 AllCops:
   TargetRubyVersion: 3.1
-  NewCops: enable  # ← 新しいCopを自動で有効にする（任意だが推奨）
 
-Naming/PredicatePrefix:
-  Enabled: true
+RSpec/MultipleExpectations:
+  Enabled: false  # 完全に無効化したい場合
