@@ -23,7 +23,6 @@ gem "webpacker", "~> 5.0" # Transpile app-like JavaScript
 group :development do
   gem "annotate"
   gem "brakeman", require: false
-  gem "factory_bot_rails"
   gem "faker"
   gem "listen", "~> 3.3"
   gem "pry-byebug"
@@ -35,6 +34,7 @@ end
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "factory_bot_rails"
   gem "pry-doc"
   gem "pry-rails"
   gem "rspec-rails"
