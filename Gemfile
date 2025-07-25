@@ -23,7 +23,6 @@ gem "webpacker", "~> 5.0" # Transpile app-like JavaScript
 group :development do
   gem "annotate"
   gem "brakeman", require: false
-  gem "faker"
   gem "listen", "~> 3.3"
   gem "pry-byebug"
   gem "rack-mini-profiler", "~> 2.0"
