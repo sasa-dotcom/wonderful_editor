@@ -14,6 +14,21 @@ DeviseTokenAuth.setup do |config|
   # Limiting the token_cost to just 4 in testing will increase the performance of
   # your test suite dramatically. The possible cost value is within range from 4
   # to 31. It is recommended to not use a value more than 10 in other environments.
+  # トークンが毎回変わらないようにする
+  config.change_headers_on_each_request = false
+
+  # トークンの有効期限を2週間に設定
+  config.token_lifespan = 2.weeks
+
+  # レスポンスヘッダーの名前を指定（フロントとの連携用）
+  config.headers_names = {
+    'access-token': "access-token",
+    client: "client",
+    expiry: "expiry",
+    uid: "uid",
+    'token-type': "token-type",
+  }
+
   config.token_cost = Rails.env.test? ? 4 : 10
 
   # Sets the max number of concurrent devices per user, which is 10 by default.
