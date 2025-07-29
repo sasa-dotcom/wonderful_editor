@@ -24,4 +24,5 @@ class Article < ApplicationRecord
   has_many :article_likes, dependent: :destroy
 
   validates :title, presence: true
+  enum status: { draft: "draft", published: "published" }
 end
