@@ -1,7 +1,8 @@
 module Api::V1
-  before_action :authenticate_user!, only: [:create, :update, :destroy]
   # base_api_controller を継承
   class ArticlesController < BaseApiController
+    before_action :authenticate_user!, only: [:create, :update, :destroy]
+
     def index
       articles = Article.order(updated_at: :desc)
       render json: articles, each_serializer: Api::V1::ArticlePreviewSerializer
@@ -26,13 +27,12 @@ module Api::V1
     def destroy
       article = current_user.articles.find(params[:id])
       article.destroy!
-      render json: article, serializer: Api::V1::ArticleSerializer
     end
 
     private
 
       def article_params
-        params.require(:article).permit(:title, :body)
+        params.require(:article).permit(:title, :body, :status)
       end
   end
 end

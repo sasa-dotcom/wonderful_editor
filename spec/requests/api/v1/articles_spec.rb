@@ -22,7 +22,7 @@ RSpec.describe "Api::V1::Articles", type: :request do
     end
   end
 
-  describe "GET /users/:id" do
+  describe "GET /articles/:id" do
     subject { get(api_v1_article_path(article_id)) }
 
     context "指定した id の記事が存在して" do
@@ -119,7 +119,7 @@ RSpec.describe "Api::V1::Articles", type: :request do
       end
     end
 
-    context "他のuserの記事を更新しようとるすとき" do
+    context "他のユーザーの記事を更新しようとるすとき" do
       let(:other_user) { create(:user) }
       let!(:article) { create(:article, user: other_user) }
 
