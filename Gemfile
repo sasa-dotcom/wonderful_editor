@@ -25,7 +25,7 @@ group :development do
   gem "brakeman", require: false
   gem "listen", "~> 3.3"
   gem "pry-byebug"
-  gem "rack-mini-profiler", "~> 2.0"
+  gem "rack-mini-profiler", "~> 4.0"
   gem "rails-erd"
   gem "spring"
   gem "web-console", ">= 4.1.0"
