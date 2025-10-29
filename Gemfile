@@ -13,7 +13,7 @@ gem "jbuilder", "~> 2.7"
 gem "kaminari"
 gem "pg", "~> 1.1" # Use pg as the database for Active Record
 gem "puma", "~> 5.0" # Use Puma as the app server
-gem "rails", "~> 6.1.7", ">= 6.1.7.1"
+gem "rails", "~> 7.2.3"
 gem "rails-i18n", "~> 7.0"
 gem "sass-rails", ">= 6" # Use SCSS for stylesheets
 gem "turbolinks", "~> 5" # Turbolinks makes navigating your web application faster
